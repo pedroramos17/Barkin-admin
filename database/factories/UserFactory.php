@@ -24,7 +24,7 @@ class UserFactory extends Factory
       'email_verified_at' => now(),
       'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
       'is_admin' => fake()->boolean,
-      'last_authors' => json_encode([
+      'author' => json_encode([
         "id" => 1,
         "name" => fake()->name(),
         "datetime" => fake()->dateTime('now', 'America/Sao_Paulo')
