@@ -100,7 +100,7 @@ class UserResource extends Resource
         Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
         Tables\Columns\TextColumn::make('email')->searchable()->sortable(),
         Tables\Columns\IconColumn::make('is_admin')->boolean()->label('Admin')->sortable(),
-        Tables\Columns\ViewColumn::make('last_authors')
+        Tables\Columns\ViewColumn::make('author')
           ->label('Author')
           ->searchable()
           ->view('tables.columns.author'),
