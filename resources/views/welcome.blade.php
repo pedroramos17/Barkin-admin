@@ -37,8 +37,8 @@
             </p>
 
             <h4 class="pt-12 text-xl font-medium dark:text-white">Invista no futuro da segurança com a Barkin</h4>
-            <x-primary-button>
-              <a href="{{ route('register') }}">Comece agora</a>
+            <x-primary-button type="button">
+              <a href="{{ route('register') }}">{{ __('Start now') }}</a>
             </x-primary-button>
           </div>
         </div>
