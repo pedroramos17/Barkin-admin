@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
       'name' => 'Pedro',
       'email' => 'pedro@test.com',
       'is_admin' => true,
-      'last_authors' => json_encode([
+      'author' => json_encode([
         "id" => 1,
         "name" => "Pedro",
         "datetime" => new \DateTime('now', new DateTimeZone('America/Sao_Paulo'))
@@ -26,5 +26,9 @@ class DatabaseSeeder extends Seeder
     ]);
 
     \App\Models\User::factory(10)->create();
+    
+    \App\Models\Driver::factory()
+        ->has(\App\Models\Vehicle::factory())
+        ->create();
   }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\Http\Resources\VehicleResource;
 
 class VehicleController extends Controller
@@ -12,7 +13,7 @@ class VehicleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): VehicleResource
+    public function index(): JsonResponse
     {
         return VehicleResource::collection(Vehicle::all())->response()->setStatusCode(200);
     }
@@ -30,7 +31,7 @@ class VehicleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vehicle $vehicle): VehicleResource
+    public function show(Vehicle $vehicle): JsonResponse
     {
         return new VehicleResource(Vehicle::findOrFail($vehicle->id));
     }

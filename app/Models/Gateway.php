@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Gateway extends Model
 {
@@ -24,6 +25,6 @@ class Gateway extends Model
     ];
 
     public function drivers(): BelongsToMany {
-        return $this->belongsToMany(Driver::class);
+        return $this->belongsToMany(Driver::class)->using(DriverGateway::class);
     }
 }

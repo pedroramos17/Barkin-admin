@@ -17,7 +17,9 @@ class GatewayFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'input' => $this->faker->dateTimeThisMonth('-2 days'),
+            'output' => $this->faker->dateTime(),
+            'permanence' => $this->faker->boolean(),
         ];
     }
 }

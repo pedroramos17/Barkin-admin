@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Driver;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\Http\Resources\DriverResource;
 
 class DriverController extends Controller
@@ -12,9 +13,9 @@ class DriverController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): DriverResource
+    public function index(): JsonResponse
     {
-        return DriverResource::collection(Driver::all());
+        return DriverResource::collection(Driver::all())->response()->setStatusCode(200);
     }
 
     /**
@@ -30,7 +31,7 @@ class DriverController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Driver $driver): DriverResource
+    public function show(Driver $driver): JsonResponse
     {
         return new DriverResource(Driver::findOrFail($driver->id));
     }

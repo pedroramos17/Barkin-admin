@@ -17,7 +17,11 @@ class VehicleFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'brand' => fake()->randomElement(['Ford', 'Fiat', 'Chevrolet', 'Mercedes', 'Toyota']),
+            'color' => fake()->colorName(),
+            'plate' => fake()->unique()->bothify('???##?##'),
+            'observation' => fake()->paragraph(),
+            'driver_id' => \App\Models\Driver::factory(),
         ];
     }
 }

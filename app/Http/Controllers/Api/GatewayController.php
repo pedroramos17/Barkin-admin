@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Gateway;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\Http\Resources\GatewayResource;
 
 class GatewayController extends Controller
@@ -12,7 +13,7 @@ class GatewayController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): GatewayResource
+    public function index(): JsonResponse
     {
         return GatewayResource::collection(Gateway::all())->response()->setStatusCode(200);
     }
@@ -30,7 +31,7 @@ class GatewayController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Gateway $gateway): GatewayResource
+    public function show(Gateway $gateway): JsonResponse
     {
         return new GatewayResource(Gateway::findOrFail($gateway->id));
     }

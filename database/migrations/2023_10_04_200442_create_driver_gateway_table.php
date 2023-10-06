@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Driver;
+use App\Models\Gateway;
 
 return new class extends Migration
 {
@@ -13,8 +15,14 @@ return new class extends Migration
     {
         Schema::create('driver_gateway', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Driver::class);
-            $table->foreignIdFor(Gateway::class);
+            $table->foreignIdFor(Driver::class)
+            ->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            $table->foreignIdFor(Gateway::class)
+            ->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
 
