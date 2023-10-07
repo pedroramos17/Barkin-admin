@@ -31,7 +31,7 @@ class VehicleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vehicle $vehicle): JsonResponse
+    public function show(Vehicle $vehicle): VehicleResource
     {
         return new VehicleResource(Vehicle::findOrFail($vehicle->id));
     }

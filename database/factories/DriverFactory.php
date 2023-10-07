@@ -19,7 +19,7 @@ class DriverFactory extends Factory
         return [
             'name' => fake()->name(),
             'rg' => fake()->unique()->numerify('##.###.###-##'),
-            'phone' => fake()->unique()->numerify('## #####-####'),
+            'phone' => fake()->unique()->numerify('(##) #####-####'),
         ];
     }
 }

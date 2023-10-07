@@ -27,7 +27,7 @@ class GatewayResource extends JsonResource
             'input' => $this->input,
             'output' => $this->output,
             'permanence' => $this->permanence,
-            'drivers' => DriverResource::collection($this->drivers),
+            'driver_id' => $this->driver_id,
         ];
     }
 }

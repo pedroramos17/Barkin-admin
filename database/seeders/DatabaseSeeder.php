@@ -26,9 +26,14 @@ class DatabaseSeeder extends Seeder
     ]);
 
     \App\Models\User::factory(10)->create();
+
     
-    \App\Models\Driver::factory()
-        ->has(\App\Models\Vehicle::factory())
+    \App\Models\Driver::factory(5)
+        ->hasVehicles()
+        ->create();
+
+    \App\Models\Gateway::factory(10)
+        ->has(\App\Models\Driver::factory())
         ->create();
   }
 }

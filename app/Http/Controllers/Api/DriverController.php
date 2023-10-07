@@ -31,7 +31,7 @@ class DriverController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Driver $driver): JsonResponse
+    public function show(Driver $driver): DriverResource
     {
         return new DriverResource(Driver::findOrFail($driver->id));
     }

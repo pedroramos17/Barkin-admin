@@ -31,7 +31,7 @@ class GatewayController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Gateway $gateway): JsonResponse
+    public function show(Gateway $gateway): GatewayResource
     {
         return new GatewayResource(Gateway::findOrFail($gateway->id));
     }

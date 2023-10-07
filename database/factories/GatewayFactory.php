@@ -20,6 +20,7 @@ class GatewayFactory extends Factory
             'input' => $this->faker->dateTimeThisMonth('-2 days'),
             'output' => $this->faker->dateTime(),
             'permanence' => $this->faker->boolean(),
+            'driver_id' => \App\Models\Driver::factory(),
         ];
     }
 }

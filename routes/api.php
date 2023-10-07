@@ -24,5 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResources([
     'drivers' => DriverController::class,
     'vehicles' => VehicleController::class,
-    'gateways' => GatewayController::class
+    'gateways' => GatewayController::class,
 ]);
