@@ -54,8 +54,8 @@ setInterval(function(){
 })()"
 wire:ignore>
   <div class="relative h-auto flex">
-    <h2 class=" text-3xl font-black dark:text-white">{{ $slot }}</h2>
-    <h2 class="text-3xl font-black dark:text-white" x-text="text"></h2>
-    <div class="absolute right-0 top-0 h-full w-1 -mr-2 bg-black dark:bg-white" x-ref="cursor"></div>
+    <h2 class=" text-3xl font-black">{{ $slot }}</h2>
+    <h2 class="text-3xl font-black" x-text="text"></h2>
+    <div class="absolute right-0 top-0 h-full w-1 -mr-2 bg-black" x-ref="cursor"></div>
   </div>
 </div>
