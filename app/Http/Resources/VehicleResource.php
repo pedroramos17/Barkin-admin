@@ -8,14 +8,6 @@ use App\Http\Resources\DriverResource;
 
 class VehicleResource extends JsonResource
 {
-
-    /**
-     * The "data" wrapper that should be applied.
-     *
-     * @var string|null
-     */
-    public static $wrap = 'vehicle';
-
     /**
      * Transform the resource into an array.
      *

@@ -7,14 +7,6 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class GatewayResource extends JsonResource
 {
-
-    /**
-     * The "data" wrapper that should be applied.
-     *
-     * @var string|null
-     */
-    public static $wrap = 'gateway';
-
     /**
      * Transform the resource into an array.
      *

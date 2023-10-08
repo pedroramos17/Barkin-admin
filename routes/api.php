@@ -17,10 +17,10 @@ use App\Http\Controllers\Api\GatewayController;
 |
 */
 
-Route::group(['middleware' => ['auth:sanctum']], function () {
+// Route::group(['middleware' => ['auth:sanctum']], function () {
   Route::apiResources([
       'drivers' => DriverController::class,
       'vehicles' => VehicleController::class,
       'gateways' => GatewayController::class,
   ]);
-});
+// });

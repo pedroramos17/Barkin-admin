@@ -7,14 +7,6 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class DriverResource extends JsonResource
 {
-
-     /**
-     * The "data" wrapper that should be applied.
-     *
-     * @var string|null
-     */
-    public static $wrap = 'driver';
-    
     /**
      * Transform the resource into an array.
      *
