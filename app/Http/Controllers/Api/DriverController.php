@@ -15,7 +15,7 @@ class DriverController extends Controller
      */
     public function index(): JsonResponse
     {
-        return DriverResource::collection(Driver::paginate())->response()->setStatusCode(200);
+        return DriverResource::collection(Driver::all())->response()->setStatusCode(200);
     }
 
     /**

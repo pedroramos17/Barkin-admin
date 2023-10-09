@@ -15,7 +15,7 @@ class GatewayController extends Controller
      */
     public function index(): JsonResponse
     {
-        return GatewayResource::collection(Gateway::paginate())->response()->setStatusCode(200);
+        return GatewayResource::collection(Gateway::all())->response()->setStatusCode(200);
     }
 
     /**

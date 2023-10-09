@@ -15,7 +15,7 @@ class VehicleController extends Controller
      */
     public function index(): JsonResponse
     {
-        return VehicleResource::collection(Vehicle::paginate())->response()->setStatusCode(200);
+        return VehicleResource::collection(Vehicle::all())->response()->setStatusCode(200);
     }
 
     /**
